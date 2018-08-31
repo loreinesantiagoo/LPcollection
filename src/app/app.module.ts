@@ -18,7 +18,7 @@ import { DisplayComponent } from './components/display.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
     FlexLayoutModule
   ],
   providers: [],
