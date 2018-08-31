@@ -38,8 +38,8 @@ export class CollectionComponent implements OnInit {
   }
 
   processAlbum() {
-    console.log('processing task:', this.abc.value);
-    this.newAlbumList.next(this.newAlbum);
+    // console.log('processing album:', this.newAlbumList.value);
+    // this.newAlbumList.next(this.newAlbum);
     // this.newAlbumList.resetForm();
   }
 
