@@ -1,0 +1,36 @@
+<mat-toolbar fxLayout fxLayoutAlign="start center" fxLayoutGap="2vw">
+  <img src="assets/imagedisc.png" alt="logo">
+  <span> My LP Collection </span>
+</mat-toolbar>
+
+<form #album="ngForm" (ngSubmit)="processAlbum" fxLayout="column row" fxLAyoutGap="2vw"
+>
+  <mat-form-field>
+    <input type="text" name="albumName" placeholder="Album"  
+    (change)="Album" ngModel matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input type="text" name="artistName" placeholder="Artist" 
+    (change)="Album" ngModel matInput>
+  </mat-form-field>
+
+  <mat-slider min="0" max="10" step="1" value="5" 
+  thumbLabel></mat-slider>
+
+  <mat-form-field>
+    <input type="text" name="albumCover" placeholder="Album cover image" 
+    (change)="Album"ngModel matInput>
+  </mat-form-field>
+
+  <div fxLayoutAlign="space-between">
+    <button type="button" mat-button mat-raised-button value="Clear">
+      <mat-icon>clear</mat-icon>
+      <span>Clear</span>
+    </button>
+    <button type="submit" mat-button mat-raised-button value="Add">
+      <mat-icon>add</mat-icon>
+      <span>Add</span>
+    </button>
+  </div>
+</form>

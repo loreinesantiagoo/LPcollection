@@ -1,0 +1,22 @@
+img{
+    height: 50px;
+    border-radius: 50%;
+}
+
+button{
+    color: rgb(31, 84, 197);
+    background-color: rgb(238, 181, 110);
+}
+
+mat-slider{
+    lighting-color: rgb(90, 245, 193);
+}
+
+mat-toolbar{
+    color: rgb(238, 181, 110);
+    background-color: rgb(67, 101, 212);
+}
+
+form{
+    float:inline-start;
+}
