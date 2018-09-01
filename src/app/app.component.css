@@ -1,0 +1,10 @@
+app-collection{
+    position: float;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+app-display{
+    position: absolute;
+}

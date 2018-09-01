@@ -8,17 +8,10 @@ import { Component, Output } from '@angular/core';
 export class AppComponent {
   title = 'LPcollection';
 
-  @Output()
+  albumList: string[] = [];
 
-  displayList: string[] = []; // ok
-
-  newAlbum(item: string) {
-
-    console.log ('Listed album:', item );
-    this.displayList.push(item);
-  }
-
-  itemDeleted(item: string) {
-    console.log('deletedItem:', item);
+  displayed(item: string) {
+    console.log('listed:', item);
+    this.albumList.push(item);
   }
 }

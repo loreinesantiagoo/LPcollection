@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-// interface Label {
-//   name: string;
-//   count: number;
-// }
+interface AlbumComp {
+  albumName: string;
+  artistName: string;
+  rating: number;
+}
 
 @Component({
   selector: 'app-collection',
@@ -12,21 +13,23 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./collection.component.css']
 })
 export class CollectionComponent implements OnInit {
-
   @Output()
-  newAlbumList = new EventEmitter<string[]>(); // ok
-  reset = NgForm;
+  ToDisplay = new EventEmitter<string[]>();
 
-  @Input()
-  itemInput: string[]; // ok
+  // ok
+  albumList(form: NgForm) { // fires the under @Output ToDisplay
+// conditions
 
-  constructor() { }
+    this.ToDisplay.next(form.value);
+    form.resetForm();
+  console.log('form:', this.albumList);
+  }
+  constructor() {
+
+  }
 
   ngOnInit() {
-    this.newAlbumList.next();
-    // this.itemInput.resetForm();
-  } // something to be fired from here
-  // resetForm: string;
+  }
 
   // formatLabel(value: number | null) {
   //   if (!value) {
@@ -39,12 +42,4 @@ export class CollectionComponent implements OnInit {
 
   //   return value;
   // }
-
-  processAlbum() {
-    // console.log('processing album:', this.newAlbumList.value);
-    // this.newAlbumList.next(this.itemInput);
-
-  }
-
 }
-// console.log('processed:', itemInput: string);

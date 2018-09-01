@@ -1,3 +1,7 @@
+mat-card{
+    background-color: rgb(247, 245, 242);
+}
+
 img{
     height: 50px;
     border-radius: 50%;
@@ -15,8 +19,4 @@ mat-slider{
 mat-toolbar{
     color: rgb(238, 181, 110);
     background-color: rgb(67, 101, 212);
-}
-
-form{
-    float:inline-start;
 }
