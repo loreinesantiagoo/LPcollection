@@ -1,10 +1,10 @@
 <table>
     <tr>
         <td>
-            <app-collection (itemInput)="newAlbum($event)" [newAlbumList]="deleteItem"></app-collection>
+            <app-collection (itemInput)="newAlbumList($event)" [itemInput]="processAlbum"></app-collection>
         </td>
         <td>
-            <app-display (itemDeleted)="clearedItem($event)" [display]="displayList">
+            <app-display>
                     <mat-list-item role="listitem">{{ newAlbumList }}</mat-list-item>
             </app-display>
         </td>

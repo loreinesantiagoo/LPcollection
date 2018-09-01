@@ -7,12 +7,12 @@
 >
   <mat-form-field>
     <input type="text" name="albumName" placeholder="Album"  
-    (change)="Album" ngModel matInput>
+     ngModel matInput>
   </mat-form-field>
 
   <mat-form-field>
     <input type="text" name="artistName" placeholder="Artist" 
-    (change)="Album" ngModel matInput>
+     ngModel matInput>
   </mat-form-field>
 
   <mat-slider min="0" max="10" step="1" value="5" 
@@ -20,11 +20,11 @@
 
   <mat-form-field>
     <input type="text" name="albumCover" placeholder="Album cover image" 
-    (change)="Album"ngModel matInput>
+    ngModel matInput>
   </mat-form-field>
 
   <div fxLayoutAlign="space-between">
-    <button type="button" mat-button mat-raised-button value="Clear">
+    <button type="button" mat-button mat-raised-button value="Clear" [disabled]="isDisabled">
       <mat-icon>clear</mat-icon>
       <span>Clear</span>
     </button>

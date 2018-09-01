@@ -1,9 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
-interface Label {
-  name: string;
-  count: number;
-}
+// interface Label {
+//   name: string;
+//   count: number;
+// }
 
 @Component({
   selector: 'app-collection',
@@ -11,36 +12,38 @@ interface Label {
   styleUrls: ['./collection.component.css']
 })
 export class CollectionComponent implements OnInit {
+
   @Output()
-  itemInput = new EventEmitter<string>();
+  newAlbumList = new EventEmitter<string[]>(); // ok
+  reset = NgForm;
 
   @Input()
-  newAlbumList: string; // ok
-
-  newAlbum: EventEmitter<string>;
+  itemInput: string[]; // ok
 
   constructor() { }
 
   ngOnInit() {
+    this.newAlbumList.next();
+    // this.itemInput.resetForm();
   } // something to be fired from here
-  // this.itemInput.next('hello');
+  // resetForm: string;
 
-  formatLabel(value: number | null) {
-    if (!value) {
-      return 0;
-    }
+  // formatLabel(value: number | null) {
+  //   if (!value) {
+  //     return 0;
+  //   }
 
-    if (value >= 10) {
-      return Math.round(value / 10);
-    }
+  //   if (value >= 10) {
+  //     return Math.round(value / 10);
+  //   }
 
-    return value;
-  }
+  //   return value;
+  // }
 
   processAlbum() {
     // console.log('processing album:', this.newAlbumList.value);
-    // this.newAlbumList.next(this.newAlbum);
-    // this.newAlbumList.resetForm();
+    // this.newAlbumList.next(this.itemInput);
+
   }
 
 }

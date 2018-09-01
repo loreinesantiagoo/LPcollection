@@ -6,15 +6,15 @@ import { Component, OnInit, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
-  @Input()
-  display: string;
 
-  deleteItem = new EventEmitter<string[]>(); // ok
+  @Input()
+  itemInput: string[]; // ok
 
   constructor() { }
 // called when component is created
 // something has to be fired here using next
   ngOnInit() {
-  }
+    console.log('uplistedAlbum:', this.itemInput);
+     }
 
 }
